@@ -26,7 +26,7 @@ RUN git clone --depth 1 https://github.com/PowerIRL/srt-live-server.git && \
 # Install SRTLA
 RUN git clone --depth 1 https://github.com/BELABOX/srtla.git && \
     cd srtla && \
-    make
+    make -j$(nproc)
 
 # Expose necessary ports
 EXPOSE 8282 8181 5000
