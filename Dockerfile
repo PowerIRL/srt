@@ -21,7 +21,7 @@ RUN git clone --depth 1 https://github.com/Haivision/srt.git && \
 # Install SRT-live-server (SLS)
 RUN git clone --depth 1 https://github.com/PowerIRL/srt-live-server.git && \
     cd srt-live-server && \
-    ./configure && make -j$(nproc) && make install
+    make -j$(nproc)
 
 # Install SRTLA
 RUN git clone --depth 1 https://github.com/BELABOX/srtla.git && \
