@@ -18,6 +18,7 @@ RUN git clone --depth 1 https://github.com/Haivision/srt.git && \
 RUN git clone --depth 1 https://github.com/PowerIRL/srt-live-server.git && \
     cd srt-live-server && \
     make -j$(nproc)
+    mkdir -p /opt/srt-live-server/logs
 # Install SRTLA
 RUN git clone --depth 1 https://github.com/BELABOX/srtla.git && \
     cd srtla && \
