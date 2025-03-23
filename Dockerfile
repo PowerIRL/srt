@@ -15,13 +15,13 @@ RUN git clone --depth 1 https://github.com/Haivision/srt.git && \
     cmake .. && make -j$(nproc) && make install && \
     ldconfig
 # Install SRT-live-server (SLS)
-RUN git clone --depth 1 https://github.com/Edward-Wu/srt-live-server.git && \
+RUN git clone --depth 1 https://github.com/PowerIRL/srt-live-server.git && \
     cd srt-live-server && \
-    ./configure && make -j$(nproc) && make install
+    make -j$(nproc)
 # Install SRTLA
 RUN git clone --depth 1 https://github.com/BELABOX/srtla.git && \
     cd srtla && \
-    make && make install
+    make
 # Expose necessary ports
 EXPOSE 8282 8181 5000
 # Set entrypoint to bash for manual control
