@@ -12,7 +12,6 @@ WORKDIR /opt
 RUN git clone --depth 1 https://github.com/Haivision/srt.git && \
     cd srt && \
     mkdir build && cd build && \
-    ./configure &&
     cmake .. && make -j$(nproc) && make install && \
     ldconfig
 # Install SRT-live-server (SLS)
