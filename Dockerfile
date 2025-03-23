@@ -19,7 +19,7 @@ RUN git clone --depth 1 https://github.com/Haivision/srt.git && \
     ldconfig
 
 # Install SRT-live-server (SLS)
-RUN git clone --depth 1 https://github.com/Edward-Wu/srt-live-server.git && \
+RUN git clone --depth 1 https://github.com/PowerIRL/srt-live-server.git && \
     cd srt-live-server && \
     ./configure && make -j$(nproc) && make install
 
